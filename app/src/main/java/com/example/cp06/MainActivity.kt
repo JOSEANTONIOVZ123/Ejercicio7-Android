@@ -86,4 +86,12 @@ class MainActivity : AppCompatActivity() {
         peliculaAdapter.notifyDataSetChanged()
         Toast.makeText(this, "Lista vaciada", Toast.LENGTH_SHORT).show()
     }
+
+    override fun onResume() {
+        super.onResume()
+        recargarLista() // Fuerza la actualización cuando volvemos a MainActivity
+    }
+
+
+
 }
